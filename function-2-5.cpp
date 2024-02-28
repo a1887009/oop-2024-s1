@@ -1,6 +1,6 @@
 #include <iostream>
 
-bool is_decending(int array[], int n){
+bool is_descending(int array[], int n){
 
     if (n < 1) { // Result for when n < 1
         return false;
