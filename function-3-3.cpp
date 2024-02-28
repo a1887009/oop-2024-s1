@@ -6,10 +6,18 @@ double weighted_average(int array[], int n){
         return 0;
     }
 
-    double average = 0;
+    double sum = 0;
     for (int i = 0; i < n; i++){
-        average += array[i] * (1.0 / n);
+        int count = 0;
+
+        for (int k = 0; k < n; k++){
+            if (array[k] == array[i]){
+                count++;
+             }
+        }
+
+        sum += array[i] * static_cast<double>(count) / n;
     }
 
-    return average;
+    return sum;
 }
