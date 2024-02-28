@@ -15,5 +15,5 @@ double array_mean(int array[], int n) {
 
     }
 
-    return static_cast<double>(sum/n); // Mean is returned
+    return static_cast<double>(sum) / n; // Mean is returned
 }
