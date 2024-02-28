@@ -8,7 +8,7 @@ double weighted_average(int array[], int n){
 
     double average = 0;
     for (int i = 0; i < n; i++){
-        average += array[i] * (1 / n);
+        average += array[i] * (1.0 / n);
     }
 
     return average;
