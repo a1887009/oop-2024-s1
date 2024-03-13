@@ -19,7 +19,7 @@ void printArray(double* array, int n){
 }
 
 double arrayMax(double* array, int n){
-    int max = array[0];
+    double max = array[0];
 
     for (int i = 1; i < n; i++){
 
