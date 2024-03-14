@@ -18,10 +18,7 @@ int main(){
     int array2Size = 10;
     double arrayValue = 5;
     double* array2 = dynamicArray(array2Size, arrayValue);
-    for (int i = 0; i < array2Size; i++){
-        cout << array2[i] << " ";
-    }
-    cout << endl;
+    printArray(array2, array2Size);
     delete array2;
 
     return 0;
