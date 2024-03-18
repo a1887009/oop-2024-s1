@@ -38,6 +38,7 @@ void hexDigits(int *numbers,int length){
                     break;
                 default:
                     break;
+            }
         }
     }
 }
