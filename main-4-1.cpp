@@ -9,9 +9,9 @@ extern int secondSmallestSum(int *numbers,int length);
 int main(){
     int* array = new int[4];
     for (int i = 0; i < 4; i++){
-        array[i] = i + 1;
+        array[i] = i;
     }
-    secondSmallestSum(array, 4);
+    cout << "Second smallest sum: " << secondSmallestSum(array, 4) << endl;
     
     delete[] array;
     return 0;
