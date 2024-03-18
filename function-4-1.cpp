@@ -1,5 +1,4 @@
 #include <iostream>
-#include <climits>
 
 using namespace std;
 
@@ -18,9 +17,19 @@ void printNumbers(int *numbers,int length){
 }
 
 int secondSmallestSum(int *numbers,int length){
+
+    if (length <= 1){
+        return 0;
+    }
+
     int sum = 0;
-    int smallest = INT_MAX;
-    int second = INT_MAX;
+    int smallest = 0;
+    int second = 0;
+
+    for (int i = 0; i < length; i++){
+        smallest += abs(numbers[i]);
+        second += abs(numbers[i]);
+    }
 
     for (int i = 0; i < length; i++){
 
