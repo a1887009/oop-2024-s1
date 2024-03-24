@@ -7,12 +7,7 @@ extern void printNumbers(int *numbers,int length);
 extern int secondSmallestSum(int *numbers,int length);
 
 int main(){
-    int* array = new int[4];
-    for (int i = 0; i < 4; i++){
-        array[i] = i + 1;
-    }
-    secondSmallestSum(array, 4);
-    
-    delete[] array;
+    int array[4] = {-1, -2, -3, -4};
+    cout << "Second smallest sum: " << secondSmallestSum(array, 4) << endl;
     return 0;
 }

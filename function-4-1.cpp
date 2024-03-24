@@ -17,19 +17,52 @@ void printNumbers(int *numbers,int length){
 }
 
 int secondSmallestSum(int *numbers,int length){
-    int sum = numbers[0];
-    int smallest = numbers[0];
-    int second = numbers[0];
+
+    if (length <= 1){
+        return 0;
+    }
+
+    int sum = 0;
+    int smallest = 0;
+    int second = 0;
 
     for (int i = 0; i < length; i++){
+<<<<<<< HEAD
         for (int k = 1; k < length; k++){
             for (int j = 0; j < k; j++){
                 sum += numbers[j];
                 cout << numbers[j] << " ";
             }
             cout << "end loop " << endl;
-        }
+=======
+        smallest += abs(numbers[i]);
+        second += abs(numbers[i]);
     }
 
-    return 0;
+    for (int i = 0; i < length; i++){
+
+        sum = 0;
+
+        for (int j = i; j < length; j++){
+
+            sum += numbers[j];
+
+            if (sum < smallest){
+
+                second = smallest;
+                smallest = sum;
+
+            }else if (sum < second && sum != smallest){
+
+                second = sum;
+            } 
+            
+            //cout << numbers[j] << " ";
+           
+>>>>>>> 1721b52c58a86c78b69b41e04596f30ee7b307d8
+        }
+        //cout << "end loop " << endl;
+    }
+
+    return second;
 }
