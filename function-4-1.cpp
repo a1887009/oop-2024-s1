@@ -22,7 +22,7 @@ int secondSmallestSum(int *numbers,int length){
     int second = numbers[0];
 
     for (int i = 0; i < length; i++){
-        for (int k = 1; k < i; k++){
+        for (int k = 1; k < length; k++){
             for (int j = 0; j < k; j++){
                 sum += numbers[j];
                 cout << numbers[j] << " ";
