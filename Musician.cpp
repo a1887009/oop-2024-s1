@@ -3,7 +3,10 @@
 #include "Musician.h"
 
 
-Musician::Musician() : Musician("null", 0) {};
+Musician::Musician() {
+    instrument  = "null";
+    experience = 0;
+};
 Musician::Musician(std::string M_INSTRUMENT, int M_EXPERIENCE) {
     instrument = M_INSTRUMENT;
     experience = M_EXPERIENCE;
