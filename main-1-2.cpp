@@ -24,7 +24,7 @@ int main(){
         cout << "Item 3 was added." << endl;
     }else {cout << "Item 3 failed to add" << endl;}
 
-    cout << "Total stock count: " << get_Total_Stock_Count() << endl;
+    cout << "Total stock count: " << store.get_Total_Stock_Count() << endl;
 
     StockItem item4 = StockItem(1, "widget");
     if (store.add_Stock(item4)){
@@ -33,12 +33,7 @@ int main(){
 
     cout << "Total widget count: " << store.get_Stock_Count(1) << endl;
 
-    int stocklist = store.get_Stock_List();
-
-    for (int i = 0; i < 3; i ++){
-        cout << stocklist[i] << endl;
-    }
-
+    //int **stocklist = store.get_Stock_List();
     
     store.~Store();
 

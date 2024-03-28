@@ -9,7 +9,8 @@ class Store: public StockItem{
 
     private:
         int size;
-        int* stock;
+        StockItem* stock;
+        int curr_size;
 
 
     public:

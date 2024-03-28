@@ -3,11 +3,13 @@
 #include "Store.h"
 
 Store::Store(){
+    curr_size = 0;
     size = 0;
     stock = new StockItem[0];
 }
 // constructor for a store that can have up to capacity number of items
 Store::Store(int capacity){
+    curr_size = 0;
     size = capacity;
     stock = new StockItem[capacity];
 }
@@ -22,7 +24,7 @@ int Store::get_Total_Stock_Count(){return curr_size;}
 int Store::get_Stock_Count(int item_code){
     int count = 0;
     for (int i = 0; i < curr_size; i++){
-        if (item_code = stock[i].get_item_code()){
+        if (item_code == stock[i].get_item_code()){
             count++;
         }
     }
@@ -38,6 +40,7 @@ StockItem *Store::get_Stock_List() {return stock;};
 bool Store::add_Stock(StockItem new_stock){
     if (curr_size < size){
         stock[curr_size] = new_stock;
+        curr_size++;
         return true;
     }
     return false;
