@@ -33,10 +33,5 @@ int main(){
 
     cout << "Total widget count: " << store.get_Stock_Count(1) << endl;
 
-    //int **stocklist = store.get_Stock_List();
-    
-    store.~Store();
-
-
 
 }
