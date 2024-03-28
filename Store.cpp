@@ -4,11 +4,12 @@
 
 Store::Store(){
     size = 0;
+    stock = new StockItem[0];
 }
 // constructor for a store that can have up to capacity number of items
 Store::Store(int capacity){
     size = capacity;
-    stock = new *StockItem[capacity];
+    stock = new StockItem[capacity];
 }
 
 // returns the number items currently stocked
