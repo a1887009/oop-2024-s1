@@ -1,6 +1,8 @@
 #include "player.h"
 #include <iostream>
 #include <string>
+#include <chrono>
+#include <thread>
 
 Player::Player(std::string name, int health, int damage){
     this->name = name;
@@ -15,6 +17,8 @@ void Player::attack(Player* opponent, int damage){
 
 void Player::takeDamage(int damage){
     health -= damage;
+    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+    std::cout << name << " takes " << damage << " damage. Remaining health: " << health << "\n";
 }
 
 int Player::getHealth() {return health;}
