@@ -5,7 +5,7 @@
 #include <thread>
 
 void Wizard::castSpell(Player* opponent){
-    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
     std::cout << getName() << " casts a spell on " << opponent->getName() << " for " << mana << " damage.\n";
     attack(opponent, mana);
 }

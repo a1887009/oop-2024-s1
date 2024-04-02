@@ -17,7 +17,7 @@ void Player::attack(Player* opponent, int damage){
 
 void Player::takeDamage(int damage){
     health -= damage;
-    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
     std::cout << name << " takes " << damage << " damage. Remaining health: " << health << "\n";
 }
 
