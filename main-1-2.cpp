@@ -14,7 +14,7 @@ int main() {
     std::string toPark;
     int i = 0;
 
-    while (parkingLot.getCapacity() > parkingLot.getParked()){
+    while (parkingLot.getCapacity() > parkingLot.getCount()){
         std::cout << "Enter the name of the vehicle to be parked: ";
         std::cin >> toPark;
 
