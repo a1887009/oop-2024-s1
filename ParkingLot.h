@@ -22,9 +22,7 @@ class ParkingLot {
 
         int getCapacity();
 
-        int getParked();
-
-        ~ParkingLot();
+        int getCount();
 
 };
 

@@ -45,8 +45,6 @@ int main() {
 
     parkingLot.unparkVehicle(unPark);
 
-    parkingLot.~ParkingLot();
-
     
     return 0;
 }

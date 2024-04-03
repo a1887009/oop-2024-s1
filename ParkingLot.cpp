@@ -46,6 +46,4 @@ bool ParkingLot::unparkVehicle(int ID) {
 
 int ParkingLot::getCapacity() {return capacity;}
 
-int ParkingLot::getParked() {return numParkedVehicles;}
-
-ParkingLot::~ParkingLot() {delete[] vehicles;}
+int ParkingLot::getCount() {return numParkedVehicles;}
