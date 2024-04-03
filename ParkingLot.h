@@ -1,0 +1,31 @@
+#ifndef PARKINGLOT_H
+#define PARKINGLOT_H
+
+#include <iostream>
+#include <ctime>
+#include "Vehicle.h"
+
+
+
+class ParkingLot {
+    private:
+        Vehicle** vehicles;
+        int capacity;
+        int numParkedVehicles;
+
+    public:
+        ParkingLot(int capacity);
+
+        bool parkVehicle(Vehicle* vehicle);
+
+        bool unparkVehicle(int ID);
+
+        int getCapacity();
+
+        int getParked();
+
+        ~ParkingLot();
+
+};
+
+#endif // PARKINGLOT_H
