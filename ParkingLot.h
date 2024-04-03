@@ -24,6 +24,8 @@ class ParkingLot {
 
         int getCount();
 
+        int countOverstayingVehicles(int maxParkingDuration);
+
 };
 
 #endif // PARKINGLOT_H
