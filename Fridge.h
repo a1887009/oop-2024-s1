@@ -10,7 +10,6 @@ class Fridge: public Appliance{
 
         double volume;
 
-
     public:
 
         Fridge();
