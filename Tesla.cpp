@@ -1,5 +1,4 @@
 #include "Tesla.h"
-#include "Car.h"
 #include <iostream>
 
 Tesla::Tesla() {
@@ -21,12 +20,12 @@ void Tesla::chargeBattery(int mins) {
 };            
 void Tesla::drive(int kms) {
     if (batteryPercentage * 5 >= kms){
-        set_kms(kms);
-        set_emissions(74 * kms);
+        set_kms(get_kms() + kms);
+        set_emissions(get_emissions() + (74 * kms));
         batteryPercentage -= kms * 0.2;
     } else{
-        set_kms(batteryPercentage * 5);
-        set_emissions(74 * batteryPercentage * 5);
+        set_kms(get_kms() + batteryPercentage * 5);
+        set_emissions(get_emissions() + (74 * batteryPercentage * 5));
         batteryPercentage = 0;
     }
 };

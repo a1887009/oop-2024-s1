@@ -24,12 +24,6 @@ class Tesla: public Car{
         float get_batteryPercentage();
         void set_batteryPercentage(int batteryPercentage);
 
-
-
-
 };
-
-
-
 
 #endif // TESLA_H
