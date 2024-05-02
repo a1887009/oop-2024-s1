@@ -10,7 +10,7 @@ Ford::Ford() {
 };            
 Ford::Ford(int badgeNumber, int price) {
     this->badgeNumber = badgeNumber;
-    litresOfFuel = 0;
+    litresOfFuel = 60;
     set_kms(0);
     set_emissions(0);
     set_price(price);

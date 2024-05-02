@@ -3,11 +3,13 @@
 
 Tesla::Tesla() {
     model = 'T';
+    batteryPercentage = 0;
     set_price(0);
     set_kms(0);
 };
 Tesla::Tesla(char model, int price) {
     this->model = model;
+    batteryPercentage = 0;
     set_price(price);
     set_kms(0);    
 };
