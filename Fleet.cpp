@@ -6,13 +6,19 @@
 
 Fleet::Fleet(){
 
-    fleet = new *Car[5];
+    fleet = new Car*[5];
 
-    fleet[0] = Tesla Tesla1('S', 10000);
-    fleet[1] = Ford Ford2(1, 20000);
-    fleet[2] = Car Car3(30000);
-    fleet[3] = Ford Ford4(2, 40000); 
-    fleet[4] = Tesla Tesla5('T', 50000);
+    Tesla v1('S', 10000);
+    Ford v2(1, 20000);
+    Car v3(30000);
+    Ford v4(2, 40000); 
+    Tesla v5('T', 50000);
+
+    fleet[0] = &v1;
+    fleet[1] = &v2;
+    fleet[2] = &v3;
+    fleet[3] = &v4; 
+    fleet[4] = &v5;
 }
 
-Fleet::get_fleet() {return &fleet;};
+Car** Fleet::get_fleet() {return fleet;};
