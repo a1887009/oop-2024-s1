@@ -11,8 +11,6 @@ class Tesla: public Car{
         float batteryPercentage;
 
     public:
-
-        // General functions
         Tesla();            
         Tesla(char model, int price);
         void chargeBattery(int mins);            
