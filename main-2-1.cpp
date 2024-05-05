@@ -5,7 +5,7 @@ using namespace std;
 
 int main(){
 
-    Tesla Tesla1();
+    Tesla T1('T', 10000);
 
 
     return 0;
