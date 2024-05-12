@@ -22,9 +22,9 @@ SRCS = main.cpp Invoice.cpp
 
 all:
 
-    $(CXX) $(CXXFLAGS) -o $(TARGET) $(SRCS)
+	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SRCS)
 
-    ./$(TARGET)
+	./$(TARGET)
 
 # Clean rule
 
@@ -32,4 +32,4 @@ all:
 
 clean:
 
-    rm -f $(TARGET)
+	rm -f $(TARGET)
