@@ -4,6 +4,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <cmath>
+#include <tuple>
 
 class Utils{
 public:

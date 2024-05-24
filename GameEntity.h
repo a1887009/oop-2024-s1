@@ -11,10 +11,10 @@ private:
     char type;
 
 public:
-    GameEntity(int x, int y, char type) : type(type) {std::get<0>(position) = x; std::get<1>(position) = y;};
+    GameEntity(int x, int y, char type) : type(type) {position = std::make_tuple(x, y);};
 
-    std::tuple<int, int> std::getPos() {return position;};
-    char std::getType() {return type;};
+    std::tuple<int, int> getPos() {return position;};
+    char getType() {return type;};
 
 };
 
