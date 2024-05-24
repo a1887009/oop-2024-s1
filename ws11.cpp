@@ -59,7 +59,7 @@ int main() {
         
         // RecordsManager receordM("test_clean.txt");
         // RecordsManager receordM("test_corrupt1.txt");
-        RecordsManager receordM("test_corrupt1.txt");
+        RecordsManager receordM("test_corrupt.txt");
         Records myRecords;
 
         // reads records
