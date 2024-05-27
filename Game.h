@@ -67,14 +67,14 @@ public:
         }
 
         if (allShipsDestroyed) {
-            std::cout << "All ships destroyed!" << std::endl;
+            //std::cout << "All ships destroyed!" << std::endl;
             break;
         }
 
         ++iteration;
     }
 
-    std::cout << "Game ended after " << iteration << " iterations." << std::endl;
+    //std::cout << "Game ended after " << iteration << " iterations." << std::endl;
 }
 };
 
