@@ -9,8 +9,6 @@
 
 class Game{
 private:
-    int numShips;
-    int numMines;
     std::vector<GameEntity*> entities;
 
 public:
@@ -18,8 +16,6 @@ public:
     void set_entities(std::vector<GameEntity*>& entities) {this->entities = entities;};
 
     std::vector<GameEntity*> initGame(int numShips, int numMines, int gridWidth, int gridHeight) {
-        this->numShips = numShips;
-        this->numMines = numMines;
         std::vector<GameEntity*> entities;
         for (int i = 0; i < numShips; i++){
             auto pos = Utils::generateRandomPos(gridWidth, gridHeight);
@@ -30,6 +26,7 @@ public:
             entities.push_back(new Mine(std::get<0>(pos), std::get<1>(pos)));
         }
         set_entities(entities);
+
         return entities;
     }
 
@@ -50,7 +47,8 @@ public:
                     if (mine->getType() == 'M') {
                         double distance = Utils::calculateDistance(ship->getPos(), mine->getPos());
                         if (distance <= mineDistanceThreshold) {
-                            dynamic_cast<Mine*>(mine)->explode();
+                            Explosion explosion = dynamic_cast<Mine*>(mine)->explode();
+                            explosion.apply(*ship);
                         }
                     }
                 }
