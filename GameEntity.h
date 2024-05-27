@@ -15,6 +15,10 @@ public:
 
     std::tuple<int, int> getPos() {return position;};
     char getType() {return type;};
+    void setPosition(int x, int y) {
+        position = std::make_tuple(x, y);
+    }
+    void setType(char type){this->type = type;};
 
 };
 
