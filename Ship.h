@@ -10,7 +10,7 @@ public:
 
     void move(int dx, int dy) {
         auto initialPos = getPos();
-        setPosition(std::get<0>(initialPos) + dx, std::get<1>(initialPos) + dy);
+        setPos(std::get<0>(initialPos) + dx, std::get<1>(initialPos) + dy);
     }
 
 };

@@ -6,7 +6,7 @@
 class Effect{
 
 public:
-    virtual void apply(GameEntity& entity) {(void)entity;};
+    virtual void apply(GameEntity& entity) {};
 
 };
 
