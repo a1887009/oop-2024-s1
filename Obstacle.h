@@ -11,7 +11,7 @@ public:
         if (getEntity() == 'O'){return true;}
         return false;
     }
-    void apply(GridUnit& unit) {unit.setEntity('X');}
+    void apply(GridUnit& unit) {unit.setEntity('O'); setEntity('X');}
 };
 
 
