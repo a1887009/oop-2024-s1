@@ -8,7 +8,7 @@ class Obstacle: public GridUnit, public Modifier{
 private: 
     bool active;
 public:
-    Obstacle(int x, int y) : active(true), GridUnit(x, y, 'O') {};
+    Obstacle(int x, int y) : GridUnit(x, y, 'O'), active(true){};
     bool isActive(){
         if (active){return true;}
         return false;

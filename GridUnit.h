@@ -19,6 +19,9 @@ public:
         std::get<1>(coordinates) = y;
     }
     void setEntity(char entity) {this->entity = entity;}
+    virtual void shift(int dx, int dy) {(void)dx; (void)dy;};
+    virtual void apply(GridUnit& unit) {(void)unit;}
+    virtual bool IsActive() {return true;}
 };
 
 
