@@ -33,19 +33,19 @@ public:
             for (auto avatar : grid){
                 if (avatar->getEntity() == 'A'){
                                                 //std::cout << "check1" << std::endl;
-                    avatar->shift(1, 0);
+                    dynamic_cast<Avatar*>(avatar)->shift(1, 0);
                                                 //std::cout << "check2" << std::endl;
                 }
                 for (auto obstacle : grid){
-                    if (obstacle->getEntity() == 'O' && obstacle->IsActive() == true){
+                    if (obstacle->getEntity() == 'O' && dynamic_cast<Obstacle*>(obstacle)->isActive() == true){
                         if (Helper::calculateDistance(avatar->getCoordinates(), obstacle->getCoordinates()) <= obstacleActivationDistance){
-                            obstacle->apply(*avatar);
+                            dynamic_cast<Obstacle*>(obstacle)->apply(*avatar);
                         }
                     }
                 }
                 if (std::get<0>(avatar->getCoordinates()) > width){
                     std::cout << "Avatar has won the game!" << std::endl;
-                    i = maxCycles;
+                    return;
                 }
             }
         }
