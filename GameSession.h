@@ -18,13 +18,11 @@ public:
 
         for (int i = 0; i < numAvatars; i++){
             auto position = Helper::generateRandomCoordinates(gridWidth, gridHeight);
-            Avatar avatar(std::get<0>(position), std::get<1>(position));
-            grid.push_back(&avatar);
+            grid.push_back(new Avatar(std::get<0>(position), std::get<1>(position)));
         }
         for (int i = 0; i < numObstacles; i++){
             auto position = Helper::generateRandomCoordinates(gridWidth, gridHeight);
-            Obstacle obstacle(std::get<0>(position), std::get<1>(position));
-            grid.push_back(&obstacle);
+            grid.push_back(new Obstacle(std::get<0>(position), std::get<1>(position)));
         }
         width = gridWidth;
         height = gridHeight;

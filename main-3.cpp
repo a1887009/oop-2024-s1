@@ -5,7 +5,7 @@ int main(){
 
     session.initGameSession(5, 1, 10, 10);
 
-    session.gameCycle(10, 1.5);
+    session.gameCycle(10, 1);
 
 
     return 0;
