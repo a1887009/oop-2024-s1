@@ -9,8 +9,8 @@ class Helper{
 public:
     static std::tuple<int, int> generateRandomCoordinates(int gridWidth, int gridHeight){
         std::tuple<int, int> RandCoordinates;
-        std::get<0>(RandCoordinates) = rand() % gridWidth + 1;
-        std::get<1>(RandCoordinates) = rand() % gridHeight + 1;
+        std::get<0>(RandCoordinates) = rand() % gridWidth;
+        std::get<1>(RandCoordinates) = rand() % gridHeight;
         return RandCoordinates;
     }
     static double calculateDistance(std::tuple<int, int> coords1, std::tuple<int, int> coords2){
